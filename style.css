@@ -510,9 +510,26 @@ details.quiz__q summary::before{
   color: var(--red);
 }
 details.quiz__q[open] summary::before{ content: "▾ "; }
-.quiz__opts{ padding: 0 1.2rem; font-size:.88rem; color:#6b6256; margin: 0 0 .6rem; }
-.quiz__answer{ padding: 0 1.2rem 1.1rem; font-size:.92rem; color:#4b443c; margin:0; }
-.quiz__answer strong{ color: var(--ink); }
+.quiz__opts{ padding: 0 1.2rem; font-size:.88rem; color:#6b6256; margin: 0 0 .8rem; }
+
+details.quiz__reveal{
+  margin: 0 1.2rem 1.1rem;
+  background: transparent;
+  border: 1px dashed var(--paper-dim);
+  border-left: 3px solid var(--gold);
+}
+details.quiz__reveal summary{
+  cursor:pointer; list-style:none;
+  padding: .6rem 1rem;
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: .8rem;
+  color: var(--red);
+}
+details.quiz__reveal summary::-webkit-details-marker{ display:none; }
+details.quiz__reveal summary::before{ content: "→ "; }
+.quiz__answer{ padding: 0 1rem 1rem; font-size:.92rem; color:#4b443c; margin:0; }
 
 .tasks{ font-size:.97rem; color:#4b443c; padding-left: 1.3rem; }
 .tasks li{ margin-bottom:.5rem; }
